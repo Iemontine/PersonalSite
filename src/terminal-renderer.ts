@@ -493,31 +493,12 @@ export function renderAboutMe(containerPx: number, fontSize: number, font?: stri
 
 	// Skills
 	{
-		const label = "i know: ";
+		const label = "done projects in: ";
 		const valuePx = colsToPixels(Math.max(1, innerCols - label.length), fontSize);
 		const valueText = aboutMe.skills.map(s => s.name).join(", ");
 		const valueLines = wrapLines(valueText, valuePx, fontSize);
 		const skillTokens = aboutMe.skills.map(s => ({ name: s.name, color: s.color, bold: true }));
 		const coloredLines = colorizeWrappedLines(valueText, valueLines, skillTokens);
-
-		for (let i = 0; i < valueLines.length; i++) {
-			const prefix = i === 0
-				? `<span style="color:${labelColor}">${esc(label)}</span>`
-				: esc(" ".repeat(label.length));
-			const html = prefix + coloredLines[i];
-			out.push(boxLnRich(html, label.length + valueLines[i].length, cols));
-		}
-	}
-	out.push(boxEmpty(cols));
-
-	// APIs
-	{
-		const label = "experience w/ apis: ";
-		const valuePx = colsToPixels(Math.max(1, innerCols - label.length), fontSize);
-		const valueText = aboutMe.apis.join(", ");
-		const valueLines = wrapLines(valueText, valuePx, fontSize);
-		const apiTokens = aboutMe.apis.map(name => ({ name, color: aboutMe.apiColor }));
-		const coloredLines = colorizeWrappedLines(valueText, valueLines, apiTokens);
 
 		for (let i = 0; i < valueLines.length; i++) {
 			const prefix = i === 0

@@ -162,13 +162,13 @@ export const contact: ContactEntry[] = [
 // ============================
 
 export const aboutMe = {
-	version: "lemontine [Version 2.026.0402]",
+	version: "lemontine [Version 2.026.0815]",
 	name: "lemontine",
 	nickname: "darroll",
 	currents: [
-		{ label: "Rewatching", value: "Scott Pilgrim Takes Off", color: "#ae4f4f" },
-		{ label: "Playing", value: "Spider-Man 2", color: "#4fae67" },
-		{ label: "Listening to", value: "Laufey", color: "#4f6dae" },
+		{ label: "Watching", value: "You and I are Polar Opposites", color: "#ae4f4f" },
+		{ label: "Playing", value: "Celeste", color: "#4fae67" },
+		{ label: "Listening to", value: "Beach Bunny", color: "#4f6dae" },
 	],
 	bio: "Photos UI SWE @ , UC Davis Alumni (Computer Science focusing on AI/ML)",
 	details: [
@@ -198,6 +198,4 @@ export const aboutMe = {
 		{ name: "Bash", color: "rgb(255,83,73)" },
 		{ name: "C", color: "rgb(101,154,210)" },
 	],
-	apis: ["pytorch", "Microsoft Azure", "openai", "gymnasium", "pycord", "Pillow", "BeautifulSoup"],
-	apiColor: "rgb(65,105,225)",
 };
